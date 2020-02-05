@@ -10,8 +10,12 @@ import android.webkit.WebViewClient;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import android.content.Intent;
+import android.net.Uri;
 
 /**
  * Created by lejard_h on 20/12/2017.
@@ -68,6 +72,13 @@ public class BrowserClient extends WebViewClient {
         // while returning false causes the WebView to continue loading the URL as usual.
         String url = request.getUrl().toString();
         boolean isInvalid = checkInvalidUrl(url);
+
+        if (!isInvalid && isFile(url)) {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            view.getContext().startActivity(browserIntent);
+            return true;
+        }
+
         Map<String, Object> data = new HashMap<>();
         data.put("url", url);
         data.put("type", isInvalid ? "abortLoad" : "shouldStart");
@@ -81,6 +92,13 @@ public class BrowserClient extends WebViewClient {
         // returning true causes the current WebView to abort loading the URL,
         // while returning false causes the WebView to continue loading the URL as usual.
         boolean isInvalid = checkInvalidUrl(url);
+
+        if (!isInvalid && isFile(url)) {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            view.getContext().startActivity(browserIntent);
+            return true;
+        }
+
         Map<String, Object> data = new HashMap<>();
         data.put("url", url);
         data.put("type", isInvalid ? "abortLoad" : "shouldStart");
@@ -106,6 +124,16 @@ public class BrowserClient extends WebViewClient {
         data.put("url", failingUrl);
         data.put("code", Integer.toString(errorCode));
         FlutterWebviewPlugin.channel.invokeMethod("onHttpError", data);
+    }
+
+    private boolean isFile(String url) {
+        String ext = url.substring(url.lastIndexOf(".") + 1);
+        String[] arrFile = new String[]{"jpg", "jpeg", "png", "pdf", "doc", "docx"};
+        List<String> list = Arrays.asList(arrFile);
+        if (list.contains(ext)) {
+            return true;
+        }
+        return false;
     }
 
     private boolean checkInvalidUrl(String url) {

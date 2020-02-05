@@ -392,25 +392,33 @@ static NSString *const CHANNEL_NAME = @"flutter_webview_plugin";
                 @"navigationType": [NSNumber numberWithInteger:navigationAction.navigationType]};
     [channel invokeMethod:@"onState" arguments:data];
 
-    if (navigationAction.navigationType == WKNavigationTypeBackForward) {
-        [channel invokeMethod:@"onBackPressed" arguments:nil];
-    } else if (!isInvalid) {
-        id data = @{@"url": navigationAction.request.URL.absoluteString};
-        [channel invokeMethod:@"onUrlChanged" arguments:data];
-    }
+    NSString* urlString = navigationAction.request.URL.absoluteString;
+    NSString *ext = [[urlString componentsSeparatedByString:@"."] lastObject];
 
-    if (_enableAppScheme ||
-        ([webView.URL.scheme isEqualToString:@"http"] ||
-         [webView.URL.scheme isEqualToString:@"https"] ||
-         [webView.URL.scheme isEqualToString:@"about"] ||
-         [webView.URL.scheme isEqualToString:@"file"])) {
-         if (isInvalid) {
-            decisionHandler(WKNavigationActionPolicyCancel);
-         } else {
-            decisionHandler(WKNavigationActionPolicyAllow);
-         }
-    } else {
+    if ([ext isEqualToString:@"pdf"] || [ext isEqualToString:@"jpg"] || [ext isEqualToString:@"png"] || [ext isEqualToString:@"docx"] || [ext isEqualToString:@"doc"]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
         decisionHandler(WKNavigationActionPolicyCancel);
+    } else {
+        if (navigationAction.navigationType == WKNavigationTypeBackForward) {
+            [channel invokeMethod:@"onBackPressed" arguments:nil];
+        } else if (!isInvalid) {
+            id data = @{@"url": navigationAction.request.URL.absoluteString};
+            [channel invokeMethod:@"onUrlChanged" arguments:data];
+        }
+        
+        if (_enableAppScheme ||
+            ([webView.URL.scheme isEqualToString:@"http"] ||
+            [webView.URL.scheme isEqualToString:@"https"] ||
+            [webView.URL.scheme isEqualToString:@"about"] ||
+            [webView.URL.scheme isEqualToString:@"file"])) {
+            if (isInvalid) {
+                decisionHandler(WKNavigationActionPolicyCancel);
+            } else {
+                decisionHandler(WKNavigationActionPolicyAllow);
+            }
+        } else {
+            decisionHandler(WKNavigationActionPolicyCancel);
+        }
     }
 }
 
