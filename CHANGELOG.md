@@ -1,3 +1,6 @@
+# 0.3.11+1
+- link with jpg, png, pdf, doc, docx extension open default browser
+
 # 0.3.10+1
 - fixed android build
 

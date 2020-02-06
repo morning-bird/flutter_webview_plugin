@@ -3,13 +3,13 @@
   "packages": [
     {
       "name": "collection",
-      "rootUri": "file:///Users/gms_ict_02/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11",
+      "rootUri": "file:///D:/kerjaan/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/gms_ict_02/Documents/flutter/packages/flutter",
+      "rootUri": "file:///D:/kerjaan/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "2.2"
     },
@@ -21,25 +21,25 @@
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/gms_ict_02/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.1.8",
+      "rootUri": "file:///D:/kerjaan/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.1.8",
       "packageUri": "lib/",
       "languageVersion": "1.12"
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/gms_ict_02/Documents/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///D:/kerjaan/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "1.11"
     },
     {
       "name": "typed_data",
-      "rootUri": "file:///Users/gms_ict_02/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.1.6",
+      "rootUri": "file:///D:/kerjaan/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.1.6",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///Users/gms_ict_02/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.8",
+      "rootUri": "file:///D:/kerjaan/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.8",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -50,7 +50,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-02-05T07:35:23.520933Z",
+  "generated": "2020-02-06T16:39:41.940601Z",
   "generator": "pub",
   "generatorVersion": "2.7.0"
 }
