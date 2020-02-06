@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'package:gmschurch_flutter_webview_plugin/gmschurch_flutter_webview_plugin.dart';
 import 'package:mockito/mockito.dart';
 
 void main() {

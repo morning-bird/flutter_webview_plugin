@@ -14,7 +14,7 @@
       "languageVersion": "2.2"
     },
     {
-      "name": "flutter_webview_plugin",
+      "name": "gmschurch_flutter_webview_plugin",
       "rootUri": "../../",
       "packageUri": "lib/",
       "languageVersion": "2.0"
@@ -50,7 +50,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-02-06T16:39:41.940601Z",
+  "generated": "2020-02-06T17:05:32.924766Z",
   "generator": "pub",
   "generatorVersion": "2.7.0"
 }

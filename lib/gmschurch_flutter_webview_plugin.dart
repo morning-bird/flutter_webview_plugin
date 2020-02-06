@@ -1,4 +1,4 @@
-library flutter_webview_plugin;
+library gmschurch_flutter_webview_plugin;
 
 export 'src/base.dart';
 export 'src/javascript_channel.dart';

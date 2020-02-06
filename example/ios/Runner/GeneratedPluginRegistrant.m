@@ -4,10 +4,10 @@
 
 #import "GeneratedPluginRegistrant.h"
 
-#if __has_include(<flutter_webview_plugin/FlutterWebviewPlugin.h>)
-#import <flutter_webview_plugin/FlutterWebviewPlugin.h>
+#if __has_include(<gmschurch_flutter_webview_plugin/FlutterWebviewPlugin.h>)
+#import <gmschurch_flutter_webview_plugin/FlutterWebviewPlugin.h>
 #else
-@import flutter_webview_plugin;
+@import gmschurch_flutter_webview_plugin;
 #endif
 
 @implementation GeneratedPluginRegistrant
