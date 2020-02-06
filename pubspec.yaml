@@ -6,9 +6,10 @@ authors:
 - Pedia <kpedia@163.com>
 - Simon Lightfoot <simon@devangels.london>
 - Rafal Wachol <gorudonu@gmail.com>
+- Renato Budiman <renato.budiman07@gmail.com>
 homepage: https://github.com/dart-flitter/flutter_webview_plugin
-version: 0.3.10+1
-maintainer: Rafal Wachol (@RafalWachol) 
+version: 0.3.11+1
+maintainer: Renato Budiman (@renatogms)
 
 environment:
   sdk: ">=2.0.0 <3.0.0"
