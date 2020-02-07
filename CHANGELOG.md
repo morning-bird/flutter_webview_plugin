@@ -1,3 +1,6 @@
+# 0.3.11+2
+- update README
+
 # 0.3.11+1
 - link with jpg, png, pdf, doc, docx extension open default browser
 

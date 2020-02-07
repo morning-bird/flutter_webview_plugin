@@ -1,7 +1,7 @@
 name: gmschurch_flutter_webview_plugin
 description: Plugin that allow Flutter to communicate with a native Webview.
 homepage: https://github.com/morning-bird/flutter_webview_plugin
-version: 0.3.11+1
+version: 0.3.11+2
 maintainer: Renato Budiman (@renatogms)
 authors:
   - Hadrien Lejard <hadrien.lejard@gmail.com>
