@@ -2,7 +2,7 @@
 
 # Flutter WebView Plugin
 
-[![pub package](https://img.shields.io/pub/v/gmschurch_flutter_webview_plugin.svg)](https://pub.dartlang.org/packages/flutter_webview_plugin)
+[![pub package](https://img.shields.io/pub/v/gmschurch_flutter_webview_plugin.svg)](https://pub.dartlang.org/packages/gmschurch_flutter_webview_plugin)
 
 Plugin that allows Flutter to communicate with a native WebView.
 
