@@ -1,3 +1,6 @@
+# 0.3.11+3
+- bug fix at podspec iOS
+
 # 0.3.11+2
 - update README
 
